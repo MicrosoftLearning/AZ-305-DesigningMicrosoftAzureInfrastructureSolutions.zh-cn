@@ -2,14 +2,16 @@
 casestudy:
   title: 设计非关系存储解决方案
   module: Non-relational storage solutions
-ms.openlocfilehash: b0d2653fbf26cb39edd16cd8c6949f5e5d990cdf
-ms.sourcegitcommit: 2821f20a573854d6de4599a4edf7cb1bc0fe0ce1
+ms.openlocfilehash: c7316d1d0b338c37f6a7c6822672c06971c0739b
+ms.sourcegitcommit: 0398c15157de2f621dd945e76523b824e500901c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "144556385"
+ms.lasthandoff: 02/23/2022
+ms.locfileid: "139134191"
 ---
 # <a name="design-non-relational-storage-case-study"></a>设计非关系存储案例研究
+
+估计时间：90 分钟
 
 ## <a name="requirements"></a>要求
 

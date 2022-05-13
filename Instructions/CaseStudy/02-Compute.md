@@ -2,14 +2,16 @@
 casestudy:
   title: 设计计算解决方案
   module: Compute solutions
-ms.openlocfilehash: 5b17d7b5813935db70c7bdd3f07991aa3ba81d96
-ms.sourcegitcommit: 2821f20a573854d6de4599a4edf7cb1bc0fe0ce1
+ms.openlocfilehash: 24c321a90580dda68ac749b69e985a31bc67092e
+ms.sourcegitcommit: 0398c15157de2f621dd945e76523b824e500901c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "144556379"
+ms.lasthandoff: 02/23/2022
+ms.locfileid: "139134171"
 ---
 # <a name="design-a-compute-solution"></a>设计计算解决方案
+
+估计时间：90 分钟
 
 ## <a name="requirements"></a>要求
 

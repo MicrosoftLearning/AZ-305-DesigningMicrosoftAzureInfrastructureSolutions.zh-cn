@@ -2,14 +2,16 @@
 casestudy:
   title: 设计身份验证和授权解决方案
   module: Authentication and authorization solutions
-ms.openlocfilehash: 4a0436e9f2d93e88fc9d1f42effb74569917c6a5
-ms.sourcegitcommit: 2821f20a573854d6de4599a4edf7cb1bc0fe0ce1
+ms.openlocfilehash: 3e3244d7d88028c8f0e839323823bcc64ee55b86
+ms.sourcegitcommit: 0398c15157de2f621dd945e76523b824e500901c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "144556376"
+ms.lasthandoff: 02/23/2022
+ms.locfileid: "139134187"
 ---
 # <a name="design-authentication-and-authorization-solutions"></a>设计身份验证和授权解决方案
+
+估计时间：60 分钟
 
 ## <a name="requirements"></a>要求
 
