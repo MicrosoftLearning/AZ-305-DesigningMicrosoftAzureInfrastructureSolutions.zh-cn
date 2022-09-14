@@ -2,33 +2,25 @@
 casestudy:
   title: 设计关系存储解决方案
   module: Relational storage solutions
-ms.openlocfilehash: e6b32b8c9e1bd89c21ca23154e2eb56658f7074b
-ms.sourcegitcommit: 0398c15157de2f621dd945e76523b824e500901c
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2022
-ms.locfileid: "139134192"
 ---
 # <a name="design-relational-storage-case-study"></a>设计关系存储案例研究
 
-估计时间：90 分钟
-
 ## <a name="requirements"></a>要求
 
-Tailwind Traders 希望将其现有的公共网站数据库转移到 Azure 上，因为网站前端也将被转移到 Azure 上。  网站前端最初将仅部署在 2 个区域以实现冗余。  但是，预计随着流量的增加，该网站将复制到世界各地的其他区域。 要求迁移的数据库会保存产品目录和所有在线订单。  目前，数据库在本地的单个 Microsoft SQL Server Always On 可用性组上运行。
+Tailwind Traders is looking to move their existing public website database into Azure, as the website front end is being moved there as well.  The website front end will initially only be deployed in 2 regions for redundancy.  However, it is expected that as traffic increases the website will be replicated to other regions around the world. The database, which you are being asked to migrate, holds the product catalog, and all online orders.  Currently the database runs on a single Microsoft SQL Server Always On availability group on premises.
 
 Tailwind Traders 的主要关注点：
 
--   **高可用性。**  Tailwind Traders 主要关注的是此数据库的高可用性，因为它对他们的业务至关重要。  任何中断都可能导致销售或客户失去信心。
+-   <bpt id="p1">**</bpt>High availability.<ept id="p1">**</ept>  A primary concern for Tailwind Traders is that this database be highly available as it is critical to their business.  Any outages may result in lost sales or customer confidence.
 
--   **网站性能。**  虽然下订单的表现通常令人满意，但浏览或搜索列出许多项的页面被报告为“缓慢”。
+-   <bpt id="p1">**</bpt>Website performance.<ept id="p1">**</ept>  While the performance of placing orders is normally satisfactory, browsing or searching pages with many items listed is reported as being “sluggish.”
 
--   **安全性。**  Tailwind Traders 非常担心存储在数据库中的个人或财务信息被暴露。  除了实施适当的安全措施外，安全团队还需要尽可能验证是否实施了行业标准最佳做法。
+-   <bpt id="p1">**</bpt>Security.<ept id="p1">**</ept>  Tailwind Traders is very concerned about personal or financial information stored in the database being exposed.  In addition to implementing proper security measures, the security team needs to verify that industry standard best practices are implemented, when possible.
 
 
 ## <a name="tasks"></a>任务
 
-1.  设计数据库解决方案。 设计应包括授权、身份验证、定价、性能和高可用性。 
+1.  Tailwind Traders 希望将其现有的公共网站数据库转移到 Azure 上，因为网站前端也将被转移到 Azure 上。 
 2.  用图表说明你的决定并解释你的解决方案。 
 
 如何整合“架构良好的框架”支柱，以生成高质量、稳定且高效的云体系结构？

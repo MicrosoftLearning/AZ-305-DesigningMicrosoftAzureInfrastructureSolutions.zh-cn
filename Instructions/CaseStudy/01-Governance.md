@@ -2,30 +2,23 @@
 casestudy:
   title: 设计治理解决方案
   module: Governance solutions
-ms.openlocfilehash: 9b0f69e46da7cc92640671a2cb917eb75d9b11ee
-ms.sourcegitcommit: 0398c15157de2f621dd945e76523b824e500901c
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 02/23/2022
-ms.locfileid: "139134174"
 ---
-# <a name="design-a-governance-solution"></a>设计治理解决方案
 
-估计时间：90 分钟
+# <a name="design-a-governance-solution"></a>设计治理解决方案
 
 ## <a name="requirements"></a>要求
 
-Tailwind Traders 计划对其治理解决方案进行一些重大更改。 他们请求你就建议和问题提供帮助。 下面是具体要求。
+Tailwind Traders is planning on making some significant changes to their governance solution. They have asked for your assistance with recommendations and questions. Here are the specific requirements.
 
-* **成本核算**。 Tailwind Traders 有两个主要的业务单位，负责服装和体育用品。 每个业务单位由三个部门组成：产品开发、市场营销和销售。 每个业务单位和子单位都将负责跟踪其 Azure 支出。 同时，企业 IT 团队将负责提供全公司范围的 Azure 成本报告。
+* <bpt id="p1">**</bpt>Cost and accounting<ept id="p1">**</ept>. Tailwind Traders has two main business units that handle Apparel and Sporting Goods. Each of the business units consist of three departments: Product Development, Marketing, and Sales. Each business unit and subunit will be responsible for tracking their Azure spend. At the same time, the Enterprise IT team will be responsible for providing company-wide Azure cost reporting.
 
-* **新的开发项目**。 该公司提供了一个新的开发项目，以获取客户反馈。 CFO 希望确保获得与项目相关的所有成本。 对于测试阶段，工作负载应托管在成本较低的虚拟机上。 虚拟机的名称应该指示它们是项目的一部分。 应自动标识不符合资源一致性规则的任何实例。
+* <bpt id="p1">**</bpt>New development project<ept id="p1">**</ept>. The company has a new development project for customer feedback. The CFO wants to ensure all costs associated with the project are captured. For the testing phase, workloads should be hosted on lower cost virtual machines. The virtual machines should be named to indicate they are part of the project. Any instances of non-compliance with resource consistency rules should be automatically identified.
 
 ## <a name="tasks"></a>任务
 
 1. **成本核算** 
 
-    * Tailwind Traders 可采用哪些不同的方式来组织其订阅和管理组。 哪种方式最能满足其需求？ 
+    * What are different ways Tailwind Traders could organize their subscriptions and management groups. Which would be the best to meet their requirements? 
 
     * 设计两个可选的层次结构并解释决策过程。
 
@@ -33,9 +26,9 @@ Tailwind Traders 计划对其治理解决方案进行一些重大更改。 他�
 
     * Tailwind Traders 可采用哪些不同的方式来跟踪新开发项目的成本？
 
-    * 如何确保符合虚拟机大小调整和命名的要求？ 
+    * 如何确保符合虚拟机大小调整和命名的要求？  
 
-    * 提出至少两种满足需求的方法。 解释你的最终决定。 
+    * Tailwind Traders 计划对其治理解决方案进行一些重大更改。 
 
 如何整合“架构良好的框架”支柱，以生成高质量、稳定且高效的云体系结构？
 
