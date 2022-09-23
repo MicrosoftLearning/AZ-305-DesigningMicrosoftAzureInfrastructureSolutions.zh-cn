@@ -1,44 +1,42 @@
 ---
 casestudy:
-    title: '设计非关系型存储解决方案'
-    module: '非关系型存储解决方案'
+  title: 设计非关系存储解决方案
+  module: Non-relational storage solutions
 ---
-# 设计非关系存储案例研究
+# <a name="design-non-relational-storage-case-study"></a>设计非关系存储案例研究
 
-预计用时：90 分钟
+## <a name="requirements"></a>要求
 
-## 要求
+Tailwind Traders wants to reduce storage costs by reducing duplicate content and, whenever applicable, migrating it to the cloud. They would like a solution that centralizes maintenance while still providing world-wide access for customers who browse media files and marketing literature. Additionally, they would like to address the storage of company data files. 
 
-Tailwind Traders 希望减少重复的内容，并在适用的情况下将其迁移到云，从而降低存储成本。他们希望有一个解决方案，在集中维护的同时，仍然为浏览媒体文件和营销宣传资料的客户提供全球访问。此外，他们还想解决公司数据文件的存储问题。 
-
-![非关系型存储体系结构](media/Nonrelational%20storage.png)
+![非关系存储体系结构](media/Nonrelational%20storage.png)
 
  
 
-* **媒体文件**。媒体文件包括显示在公司内部开发和维护的公共网站上的产品照片和精选视频。当客户浏览某个项目时，将显示相应的媒体文件。媒体文件有不同的格式，但最常见的是 JPEG 和 MP4。 
+* <bpt id="p1">**</bpt>Media files<ept id="p1">**</ept>. Media files include product photos and feature videos that are displayed on the company’s public website, which is developed and maintained in house. When a customer browses to an item, the corresponding media files are displayed. The media files are in different formats, but JPEG and MP4 are the most common. 
 
-* **市场营销资料**。营销宣传资料包括客户故事、销售传单、尺寸表和环保制造信息。内部营销用户通过他们的 Windows 工作站上的映射驱动器访问这些宣传资料。客户直接从公司的公共网站上访问这些宣传资料。
+* <bpt id="p1">**</bpt>Marketing literature<ept id="p1">**</ept>. The marketing literature includes customer stories, sales flyers, sizing charts, and eco-friendly manufacturing information. Internal marketing users access the literature via a mapped drive on their Windows workstations. Customers access the literature directly from the company’s public website.
 
-* **公司文档**。这些是人力资源和财务等部门的内部文档。通过内部开发的 Web 应用程序访问和管理这些文档。法律要求各种文档必须保留一段特定时间。偶尔在调查法律或 HR 问题时，文件将需要保留更长时间。大多数超过一年的公司文档只是出于合规性原因而保留，很少对其进行访问。
+* <bpt id="p1">**</bpt>Corporate documents<ept id="p1">**</ept>. These are internal documents for departments such as human resources and finance. These documents are accessed and managed via an internally developed web application. Legal requires that various documents be retained for a specific period of time. Occasionally documents will need to be maintained longer when legal or HR issues are being investigated. Most corporate documents older than one year are only kept for compliance reasons and are seldom accessed.
 
-* **文件位置**。所有文件都储存在本地的主办公数据中心。按部门或产品线组织的文件共享数量众多。数据服务器正在努力为网站提供文件。在高峰时段，网站页面呈现缓慢。 
+* Tailwind Traders 希望通过减少重复内容并在适用的情况下将其迁移到云来降低存储成本。 
 
-* **文件访问频率**。有些产品更受欢迎，这些数据访问更频繁。然而，有些产品（如滑雪装备）只在特定的季节被访问。促销活动使人们对某些促销商品产生很大的兴趣。 
+* 他们希望有这样一种解决方案：能够集中维护，同时仍为浏览媒体文件和营销资料的客户提供全球访问权限。 
 
-## 任务
+## <a name="tasks"></a>任务
 
-1. 为 Tailwind Traders 设计存储解决方案。 
+1. 为 Tailwind Traders 设计存储解决方案。  
 
-      * 展示哪种类型的数据？ 
+      * 代表什么类型的数据？  
 
-      * 你在设计中会考虑哪些因素？
+      * 在设计中会考虑哪些因素？
 
       * 你会使用 Blob 访问层吗？
 
       * 你会使用不可变存储吗？
 
-      * 如何安全地访问内容？
+      * 如何安全访问内容？
 
-2.  你的解决方案应考虑媒体、市场营销资料和公司文档。你的建议可能因数据而异。准备好讨论你的选择。 
+2.  此外，他们还希望解决公司数据文件的存储问题。 
 
-如何结合架构良好框架的支柱来生成高质量、稳定和高效的云体系结构?
+如何整合“架构良好的框架”支柱，以生成高质量、稳定且高效的云体系结构？

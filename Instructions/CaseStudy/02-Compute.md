@@ -1,33 +1,31 @@
 ---
 casestudy:
-    title: '设计计算解决方案'
-    module: '计算解决方案'
+  title: 设计计算解决方案
+  module: Compute solutions
 ---
 
-# 设计计算解决方案
+# <a name="design-a-compute-solution"></a>设计计算解决方案
 
-预计用时：90 分钟
+## <a name="requirements"></a>要求
 
-## 要求
-
-Tailwind Traders 希望将他们的产品目录应用程序迁移到云中。该应用程序有一个传统的 3 层配置，使用 SQL Server 作为数据存储。IT 团队希望你能帮助实现该应用程序的现代化。他们提供了这张关系图和几处可改进的方面。 
+Tailwind Traders would like to migrate their product catalog application to the cloud. This application has a traditional 3-tier configuration using SQL Server as the data store. The IT team hopes you can help modernize the application. They have provided this diagram and several areas that could be improved. 
 
 ![计算体系结构](media/compute.png)
 
-* 前端应用程序是一个基于 .NET Core 的 Web 应用。在高峰期间，每小时有 1750 名客户访问该网站。 
+* The frontend application is a .NET core-based web app. During peak periods 1750 customers visit the website each hour. 
 
-* 该应用程序在前端层中的 IIS Web 服务器上运行。此层级处理所有客户购买产品的请求。在最近的假日销售中，前端服务器达到了性能极限，页面加载时间很长。IT 团队已经考虑增加更多的服务器，但在非工作时间，服务器经常处于空闲状态。
+* The application runs on IIS web servers in a front-end tier. This tier handles all customer requests for purchasing products. During the latest holiday sale, the front-end servers reached their performance limits and page loads were lengthy. The IT team has considered adding more servers, but during off hours the servers are often idle.
 
-* 中间层承载着处理客户请求的业务逻辑。这些请求通常是寻求支持人员的帮助。支持请求排队进行，最近等待时间很长。客户可以使用电子邮件，而不是等待服务代表。但许多客户似乎很沮丧，宁可断开连接也不愿等待。每小时有 75-125 个客户请求。 
+* The middle tier hosts the business logic that processes customer requests. These requests are often for help desk support. Support requests are queued and lately the wait times have been very long. Customers are offered email rather than wait for a representative. But many customers seem frustrated and are disconnecting rather than wait. Customer requests are 75-125 per hour. 
 
-* 后端层使用 SQL Server 数据库来存储客户订单。目前，后端数据库服务器运行良好。
+* Tailwind Traders 希望将其产品目录应用程序迁移到云中。
 
-* 虽然高可用性是一个问题，但由于法律要求，公司必须将所有资源放在一个区域。
+* 虽然高可用性是一个问题，但由于法律要求，公司必须将所有资源保存在一个区域。
 
-## 任务
+## <a name="tasks"></a>任务
 
-* **前端层**。你会为前端层推荐哪种 Azure 计算服务？解释一下你为什么决定采用此解决方案。 
+* 此应用程序具有传统的 3 层配置，同时使用 SQL Server 作为数据存储。 
 
-* **中间层**。你会为中间层推荐哪种 Azure 计算服务？解释一下你为什么决定采用此解决方案。 
+* IT 团队希望你能够帮助实现应用程序的现代化。 
 
-如何结合架构良好框架的支柱来生成高质量、稳定和高效的云体系结构？
+如何整合“架构良好的框架”支柱，以生成高质量、稳定且高效的云体系结构？

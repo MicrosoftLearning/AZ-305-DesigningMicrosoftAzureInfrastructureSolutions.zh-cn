@@ -1,41 +1,39 @@
 ---
 casestudy:
-    title: '设计网络解决方案 - BI 企业应用程序'
-    module: '网络基础结构解决方案（选项 2）'
+  title: 设计网络解决方案 - BI 企业应用程序
+  module: Network infrastructure solutions
 ---
-# 设计网络基础结构解决方案  
+# <a name="design-a-network-infrastructure-solution"></a>设计网络基础结构解决方案  
 
-预计用时：60 分钟
+## <a name="requirements"></a>要求
 
-## 要求
+As the Tailwind Traders Enterprise IT team prepares to define the strategy to migrate some of company’s workloads to Azure, it must identify the required networking components and design a network infrastructure necessary to support them. Considering the global scope of its operations, Tailwind Traders will be using multiple Azure regions to host its applications. Most of these applications have dependencies on infrastructure and data services, which will also reside in Azure. Internal applications migrated to Azure must remain accessible to Tailwind Traders users. Internet-facing applications migrated to Azure must remain accessible to any external customer. 
 
-由于 Tailwind Traders 企业 IT 团队准备定义将公司的一些工作负载迁移到 Azure 的策略，因此它必须确定所需的网络组件，并设计必要的网络基础结构来支持它们。考虑到该公司是在全球范围内运营的，Tailwind Traders 将使用多个 Azure 区域来托管其应用程序。大多数应用程序都依赖于基础结构和数据服务，这些服务也将驻留在 Azure 中。迁移到 Azure 的内部应用程序必须保持能被 Tailwind Traders 用户访问的状态。迁移到 Azure 的面向 Internet 的应用程序必须保持能被任何外部客户访问的状态。 
+为了整合初始网络设计，Tailwind Traders Enterprise IT 团队选择了两个关键的应用程序，它们代表了预计将迁移到 Azure 的最常见的工作负载类别。  
 
-为了将最初的网络设计结合在一起，Tailwind Traders 企业 IT 团队选择了两个关键的应用程序，它们代表了预期迁移到 Azure 的最常见的工作负载类别。  
-
-## 设计 - BI 企业应用程序 
+## <a name="design---bi-enterprise-application"></a>设计 - BI 企业应用程序 
 
 ![BI 企业应用程序体系结构](media/compute.png)
 
--	一个内部、基于 Windows 的三层商业智能 (BI) 企业应用程序，前端层运行 IIS web 服务器，中间层托管基于 .NET Framework 的业务逻辑，后端层实现为 SQL Server Always On 可用性组数据库。 
+-   基于 Windows 的内部三层商业智能 (BI) 企业应用程序，前端层运行 IIS Web 服务器，中间层托管基于 .NET Framework 的业务逻辑，后端层实现为 SQL Server Always On 可用性组数据库。 
 
--	此应用程序被归类为任务关键型，需要预配高可用性，具备 99.99% 可用性 SLA 以及 10 分钟 RPO 和 2 小时 RTO 的灾难恢复。
+-   此应用程序归类为任务关键型应用程序，需要预配高可用性（99.99% 可用性 SLA）和灾难恢复（10 分钟 RPO 和 2 小时 RTO）。
 
--	为了提供对迁移到 Azure 的内部应用的连接，Tailwind Traders 需要从他们的本地数据中心建立混合连接。企业 IT 部门已经确定，从西雅图主数据中心通过使用 ExpressRoute 线路来实现该连接，但是目前尚不清楚在线路变得不可用的情况下要采用怎样的故障转移解决方案。Tailwind Traders 的 CFO 希望避免为另一个多余的 ExpressRoute 线路支付费用。 
+-   To provide connectivity to internal apps migrated to Azure, Tailwind Traders will need to establish hybrid connectivity from their on-premises datacenters. The Enterprise IT group already established that such connectivity will be implemented by using ExpressRoute circuit from its main Seattle datacenter, however, at this point it is not clear yet what would be failover solution in case that circuit becomes unavailable. The Tailwind Traders CFO wants to avoid paying for another, redundant ExpressRoute circuit. 
 
-- 对于迁移到 Azure 的内部应用的本地连接，还有其他注意事项。由于 Tailwind Traders Azure 环境将由多个订阅和多个虚拟网络组成，为了最大限度地降低成本，尽量减少实现核心网络功能所需的 Azure 资源数量至关重要。这些功能包括到本地位置的混合连接以及流量筛选。顺带一提，这种成本最小化的需求符合信息安全和风险要求，其中规定本地位置和 Azure 虚拟网络之间的所有流量必须通过单个虚拟网络流动，该虚拟网络将托管负责混合连接和流量筛选的组件。 
+- There are additional considerations that apply to on-premises connectivity to internal apps migrated to Azure. Since the Tailwind Traders Azure environment will consist of multiple subscriptions and, effectively, multiple virtual networks, to minimize cost, it is important to minimize the number of Azure resources required to implement core networking capabilities. Such capabilities include hybrid connectivity to on-premises locations as well as traffic filtering. Incidentally, this need to minimize cost aligns with the Information Security and Risk requirements, which state that all traffic between on-premises locations and Azure virtual networks must flow via a single virtual network, which will be hosting components responsible for hybrid connectivity and traffic filtering. 
 
--	根据 Tailwind Traders 信息安全和风险团队定义的要求，属于同一应用程序的不同层级中 Azure VM 之间的所有通信必须只允许运行和维护应用程序所需的端口。但是，由于 IP 地址空间限制，可能无法为每个层级分配专用子网。企业 IT 小组需要确定配置流量筛选的源和目标的最佳方式，而无需直接引用 IP 地址或 IP 地址范围。
+-   As per requirements defined by the Tailwind Traders Information Security and Risk teams, all communication between Azure VMs in different tiers that are part of the same application must allow only the ports required to run and maintain the application. However, due to IP address space limitations, it might not be possible to allocate dedicated subnets to each tier. Enterprise IT group needs to identify the optimal way to configure source and destination for traffic filtering that would not require directly referencing IP addresses or IP address ranges.
 
 
-## 任务 - BI 企业应用程序 
+## <a name="tasks---bi-enterprise-application"></a>任务 - BI 企业应用程序 
 
-1. 为 BI 应用程序设计一个三层网络解决方案。你的设计可以包括 Azure ExpressRoute、VPN 网关、应用程序网关、Azure 防火墙和 Azure 负载均衡器。应将网络组件分组到虚拟网络中，并考虑网络安全组。准备好解释为什么选择解决方案的每个组件。 
+1. Tailwind Traders Enterprise IT 团队在准备定义将公司的某些工作负荷迁移到 Azure 的策略时，必须确定所需的网络组件并设计支持这些组件所需的网络基础结构。 
 
-2. 根据计算案例研究中的体系结构解决方案，这将如何影响网络设计？是否需要任何其他网络资源来保护对现代化应用程序的访问？是否不再需要在原始网络设计中实现一些建议解决方案？ 
+2. 考虑到其运营遍及全球，Tailwind Traders 将使用多个 Azure 区域来托管其应用程序。 
 
-3. 根据存储（关系型）案例研究，你将如何更新网络设计以保护对存储帐户的访问，并确保只有选定的用户有权访问存储帐户？
+3. 根据存储（关系）案例研究，如何更新网络设计，以保护对存储帐户的访问，并确保仅精选用户有权访问存储帐户？
 
-4. 基于 SQL 后端的现代化，你打算如何实现对数据库的实用访问，使前端的代码库中没有硬编码机密？
+4. 根据 SQL 后端的现代化，计划如何实现对数据库的实际访问，以便前端在其代码库中没有硬编码的机密？
 
-如何结合架构良好框架的支柱来生成高质量、稳定和高效的云体系结构?
+如何整合“体系结构良好的框架”支柱，以生成高质量、稳定且高效的云体系结构？

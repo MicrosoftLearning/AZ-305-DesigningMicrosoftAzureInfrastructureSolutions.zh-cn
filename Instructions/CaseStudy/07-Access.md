@@ -1,49 +1,47 @@
 ---
 casestudy:
-    title: '设计身份验证和授权解决方案'
-    module: '身份验证和授权解决方案'
+  title: 设计身份验证和授权解决方案
+  module: Authentication and authorization solutions
 ---
 
 
-# 设计身份验证和授权解决方案
+# <a name="design-authentication-and-authorization-solutions"></a>设计身份验证和授权解决方案
 
-预计用时：60 分钟
+## <a name="requirements"></a>要求
 
-## 要求
+Tailwind Traders is doing very well and is expanding their workforce. They have successfully acquired an online retailer in the sports apparel space. The company has also located a partner to outsource marketing literature. Tailwind Traders is using Azure Active Directory for user and groups accounts. Here are two specific initiatives the IT department would like you to help with. 
 
-Tailwind Traders 发展良好，而且正在扩大他们的员工队伍。他们成功收购了一家运动服装领域的在线零售商。该公司还找到了一个合作伙伴来外包营销宣传资料。Tailwind Traders 使用 Azure Active Directory 来处理用户帐户和组帐户。IT 部门希望你在下列两项具体计划上提供帮助。 
+**新用户帐户**
 
-**新建用户帐户**
+  * The online retailer acquisition will add 75 employees to Tailwind Traders. All the new users have on-premises Active Directory Domain Services accounts in the retailer’s existing domain.
 
-  * 收购在线零售商后，Tailwind Traders 的员工人数将增加 75 名。所有新用户在零售商的现有域中都拥有本地 Active Directory 域服务帐户。
+  * The new marketing partner will initially have 15 employees who will need corporate access. These employees already have Azure AD accounts in the partner’s AAD tenant. 
 
-  * 新的营销合作伙伴最初将有 15 名员工，他们需要公司访问权限。这些员工已经在该合作伙伴的 AAD 租户中拥有 Azure AD 帐户。 
-
-  * 这些新员工分布在不同的地理位置，需要拥有帐户特权来担任他们的新工作角色。预计现有员工角色会有一些变化。 
+  * The new employees are located at various geographic locations and will need account privileges for their new job roles. Some changes to existing employee roles are expected. 
 
   * IT 部门希望借此机会加入新的标识安全功能。 
 
-**新建应用程序访问**
+**新的应用程序访问权限**
 
-  * 业务开发团队有一个在 Azure VM 上运行的应用程序，并且数据存储在 Azure SQL 数据库中。他们需要安全地允许 VM 查询 Azure SQL 数据库。 
-  * 他们还需要一个本地服务器来安全地访问 SQL 数据库，而无需在应用程序代码或配置文件中存储凭据。
+  * Tailwind Traders 表现非常出色，正在扩大员工队伍。 
+  * 还需要本地服务器才能安全地访问 SQL 数据库，而无需在应用程序代码或配置文件中存储凭据。
 
-## 任务
+## <a name="tasks"></a>任务
 
-**新建用户帐户**
+**新用户帐户**
 
-  * 绘制引入已获取的用户帐户的流程图。
+  * 绘制引入已获取的用户帐户的过程图。
 
-  * 绘制添加新合作伙伴帐户的流程图。 
+  * 绘制添加新合作伙伴帐户的过程图。 
 
-  * 对于上述需求，请确保包含需要使用的任何工具。针对自己提出的解决方案，列出至少三个优点。 
+  * 他们成功收购了一家体育服装领域的在线零售商。 
 
-* 请提出至少三条建议来改进 Tailwind Traders 用户标识解决方案。将这些建议按重要性进行排序。提供给出这些建议的原因。 
+* 该公司还找到了一个合作伙伴来外包营销文献。 
 
-**新建应用程序访问**
+**新的应用程序访问权限**
 
   * 为业务开发应用程序提供访问解决方案。
 
   * 为本地资源提供访问解决方案。
 
-如何结合架构良好框架的支柱来生成高质量、稳定和高效的云体系结构？
+如何整合“架构良好的框架”支柱，以生成高质量、稳定且高效的云体系结构？

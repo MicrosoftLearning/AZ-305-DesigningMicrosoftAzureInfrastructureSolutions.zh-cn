@@ -1,23 +1,21 @@
 ---
 casestudy:
-    title: '设计应用体系结构解决方案'
-    module: '应用体系结构解决方案'
+  title: 设计应用体系结构解决方案
+  module: App architecture solutions
 ---
-# 设计应用体系结构解决方案
+# <a name="design-an-app-architecture-solution"></a>设计应用体系结构解决方案
 
-预计用时：90 分钟
+## <a name="requirements"></a>要求
 
-## 要求
+Tailwind Traders is looking to update their website to include customer supplied product images in addition to the already existing photos provided by marketing. They believe that having more photos of products in use will give potential customers a better feel for how past customers loved their products after purchasing them. They do have some requirements as outlined below:
 
-Tailwind Traders 希望更新他们的网站，除了市场部门已经提供的现有照片外，还包括客户提供的产品图像。他们相信，如果有更多照片显示产品使用情况，这将使潜在客户更好地感受之前的客户在购买产品后对它们的喜爱程度。他们有一些要求，如下所述：
+* Uploaded images will need to be scanned before getting posted on the website. Legal and Marketing are both requesting that after initial upload, the images be checked for any issues that reflect poorly upon the company or could cause legal issues. An in-house API has already been developed and deployed that can perform the necessary scanning. 
 
-* 上传的图像在发布到网站之前需要进行扫描。法务部和市场部都要求在初次上传后，检查图像是否有任何对公司不利或可能导致法律问题的瑕疵。公司已经开发并部署了一个内部 API，可执行必要的扫描。 
+* Based on existing patterns, Tailwind Traders expects the image uploads to happen very unevenly throughout the day. Certain periods may experience more uploads than the scanning software can handle, while other periods may experience very few or no uploads.
 
-* 根据现有的模式，Tailwind Traders 预计图像上传数量在一天中波动很大。在某些时段，上传量可能会超出扫描软件的处理能力，而在其他时段，可能上传量非常少或没有上传。
+* 系统扫描并批准上传的图像后，Tailwind Traders 希望客户收到一封电子邮件，感谢他们共享其图像。
 
-* 上传的图像被扫描并被系统批准后，Tailwind Traders 希望向客户发送一封电子邮件，感谢他们分享图像。
-
-* 解决方案的成本和管理是一个问题，特别是 Tailwind Traders 不确定该功能最初的受欢迎程度。尽量降低成本，尽可能使用无服务器解决方案。
+* Cost and management of the solution is a concern, especially since Tailwind Traders isn’t sure how popular this feature will be initially. Minimize costs and leverage serverless solutions where possible.
 
  
 
@@ -25,16 +23,16 @@ Tailwind Traders 希望更新他们的网站，除了市场部门已经提供的
 
  
 
-## 任务
+## <a name="task"></a>任务
 
-设计一个体系结构来处理要添加到公司网站的客户图像。 
+为要添加到公司网站的客户图像设计体系结构。  
 
-* 这些图像应存储在哪里？
+* 图像应存储在何处？
 
-* 你将如何确保所有图像都被扫描（即使在上传量超过扫描能力的情况下）？
+* 如何确保所有的图像都被扫描，即使上传速度超过扫描速度？
 
-* 在系统批准图像并更新目录数据库后，如何通知客户？ 
+* 图像获得批准并更新目录数据库后，将如何通知客户？ 
 
-如何结合架构良好框架的支柱来生成高质量、稳定和高效的云体系结构?
+如何整合“架构良好的框架”支柱，以生成高质量、稳定且高效的云体系结构？
 
  

@@ -1,6 +1,6 @@
 ---
 casestudy:
-    title: '无正式的案例研究'
-    module: '业务持续性解决方案'
+  title: 无正式案例研究
+  module: Business continuity solutions
 ---
 本模块没有正式的案例研究。 
