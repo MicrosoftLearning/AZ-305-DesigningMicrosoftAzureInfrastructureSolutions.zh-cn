@@ -9,29 +9,29 @@ casestudy:
 
 **本案例研究需要你完成以下模块和案例研究：计算、关系数据、非关系数据、身份验证和应用程序体系结构**
 
-You have taken a new position with Fabrikam Residences, which is very successful and is experiencing rapid growth. Fabrikam Residences is a building contractor for new homes and major home renovations and have become successful by providing quality buildings and offering newer integrated home technologies than their competitors.  
+你在 Fabrikam Residences 担任新职位，该公司非常成功，正经历着快速发展。 Fabrikam Residences 是新房和大型房屋翻新的建筑承包商，通过提供优质建筑和提供比竞争对手更新的集成家居技术而获得成功。  
 
-Currently these technologies are provided and managed by separate sub-contract companies. The owners of Fabrikam Residences want to begin offering these upgraded technology options in-house to provide better quality, support and data on customer patterns and needs. 
+目前，这些技术由独立的分包公司提供和管理。 Fabrikam Residences 的所有者希望开始在内部提供这些升级的技术选项，以提供更好的质量、支持和有关客户模式和需求的数据。 
  
-Initially, the company wants to offer HVAC (heating and cooling) control and monitoring, security system monitoring and alerts, and home automation. This will require a new website, data storage solution and data ingestion solution.
+最初，该公司希望提供 HVAC（采暖和制冷）控制和监视、安全系统监视和警报，以及家庭自动化。 这需要一个新的网站、数据存储解决方案和数据引入解决方案。
 
-The company has seen tremendous growth over the past 2 years. The company is estimating it may double in size over the next 12-18 months. With such rapid growth in the regional market, the company has no current plans to expand outside of the regional market.
+在过去的两年中，该公司取得了巨大的发展。 该公司估计，在未来 12-18 个月内，其规模可能会翻一番。 在区域市场增长如此之快的情况下，公司目前没有向区域市场以外扩张的计划。
 
 ## <a name="current-situation"></a>当前情况
 
-The Fabrikam Headquarters operates a small datacenter in a single location. The datacenter hosts the company <bpt id="p1">**</bpt>Project Management (PM) software<ept id="p1">**</ept>.
+Fabrikam 总部在单个位置运营一个小型数据中心。 该数据中心托管公司项目管理 (PM) 软件。
 
 ![项目管理软件体系结构](media/fabrikam.png)
 
-- 你在 Fabrikam Residences 担任新职位，该公司非常成功，正经历着快速发展。  
+- PM 软件使用第三方 Windows 应用程序。 该应用程序在具有单个 Microsoft SQL Server 后端的 2 节点网络负载均衡 (NLB) 群集上运行。  
 
 - 图像和文档存储在服务器的映射驱动器上，该驱动器驻留在专用 NAS 设备上。
 
 - 企业用户和办公室工作人员使用 Web 前端输入数据，例如供应交付计划和变更单。
 
--   Fabrikam Residences 是新房和大型房屋翻新的建筑承包商，通过提供优质建筑和提供比竞争对手更新的集成家居技术而获得成功。
+-   现场主管使用脱机的 Windows 笔记本电脑和平板电脑持续记录建筑进度和其他详细信息。  这些更改（例如新工单）存储在本地更改文件中。  每天结束时，主管返回办公室连接无线网络并运行一个小脚本将更改文件上传到 FTP 服务器。  第二个脚本计划每晚运行，以处理所有更改文件，并将其内容输入项目管理数据库 (Microsoft SQL Server)。
 
-The <bpt id="p1">**</bpt>Home Technology software<ept id="p1">**</ept> is currently provided and hosted by third parties and involves at least three different websites the customer must visit.  It is proposed the software be replaced with an in-house developed and unified solution.
+家庭技术软件目前由第三方提供和托管，涉及客户必须访问的至少三个不同的网站。  建议将该软件替换为内部开发的统一解决方案。
 
 ![HVAC、安全性和自动化应用关系图](media/software.png)
 
@@ -41,9 +41,9 @@ The <bpt id="p1">**</bpt>Home Technology software<ept id="p1">**</ept> is curren
 
 - 将尽可能多的系统迁移到公有云提供商。
 
-- 目前，这些技术由独立的分包公司提供和管理。
+- 出现安全问题时，替换现有的脚本以利用比 FTP 更安全的系统。 此外，系统要求你确保更改文件在上传后立即得到处理。
 
-- Fabrikam Residences 的所有者希望开始在内部提供这些升级的技术选项，以提供更好的质量、支持和有关客户模式和需求的数据。
+- 提高项目管理数据库的复原能力。 虽然性能不是问题，但公司希望避免在出现单个硬件故障时失去对数据库的访问权限。
 
 **新家庭技术解决方案**
 
@@ -55,7 +55,7 @@ The <bpt id="p1">**</bpt>Home Technology software<ept id="p1">**</ept> is curren
   - 系统必须可缩放。
   - 冗余至关重要。
   
-- The new unified website will be developed in house and hosted on Linux.  This website will be used to view monitors and change preferences for items such as temperature or alert thresholds. Loads can vary widely, and the system must be able to scale quickly.
+- 新的统一网站将在内部开发，并托管在 Linux 上。  此网站将用于查看监视器并更改温度或警报阈值等项目的偏好。 负载可能变化很大，并且系统必须能够快速缩放。
 
 -   为用户提供一种登录系统的方法，而无需创建另一个用户帐户和密码。
 
@@ -63,9 +63,9 @@ The <bpt id="p1">**</bpt>Home Technology software<ept id="p1">**</ept> is curren
 
 ## <a name="tasks"></a>任务 
 
-1. 最初，该公司希望提供 HVAC（采暖和制冷）控制和监视、安全系统监视和警报，以及家庭自动化。
+1. 为项目管理软件设计解决方案。 请准备好解释为何选择设计的每个组件以及它如何满足解决方案的要求。
 
-2. 这需要一个新的网站、数据存储解决方案和数据引入解决方案。
+2. 为新家庭技术解决方案设计体系结构。 请准备好解释为何选择设计的每个组件以及它如何满足解决方案的要求。
 
 如何整合“架构良好的框架”支柱，以生成高质量、稳定且高效的云体系结构？
 

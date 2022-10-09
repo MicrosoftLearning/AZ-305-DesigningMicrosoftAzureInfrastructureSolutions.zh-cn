@@ -7,15 +7,15 @@ casestudy:
 
 ## <a name="requirements"></a>要求
 
-Tailwind Traders is looking to update their website to include customer supplied product images in addition to the already existing photos provided by marketing. They believe that having more photos of products in use will give potential customers a better feel for how past customers loved their products after purchasing them. They do have some requirements as outlined below:
+Tailwind Traders 希望更新其网站，以包含客户提供的产品图像，以及市场营销部提供的现有照片。 他们认为，拥有更多正在使用的产品的照片将使潜在客户更好地了解过去的客户在购买产品后对产品的喜爱程度。 他们确实有一些要求，概述如下：
 
-* Uploaded images will need to be scanned before getting posted on the website. Legal and Marketing are both requesting that after initial upload, the images be checked for any issues that reflect poorly upon the company or could cause legal issues. An in-house API has already been developed and deployed that can perform the necessary scanning. 
+* 在发布到网站上之前，需要扫描上传的图像。 法务部和市场营销部都要求在初次上传后，对图片进行检查，看是否存在任何对公司不利或可能导致法律问题的问题。 已开发并部署了一个内部 API，可以执行必要的扫描。 
 
-* Based on existing patterns, Tailwind Traders expects the image uploads to happen very unevenly throughout the day. Certain periods may experience more uploads than the scanning software can handle, while other periods may experience very few or no uploads.
+* 基于现有模式，Tailwind Traders 预计图像上传在一天中会非常不均衡。 某些时间段的上传次数可能超过扫描软件的处理能力，而其他时间段的上传次数可能很少或根本没有。
 
 * 系统扫描并批准上传的图像后，Tailwind Traders 希望客户收到一封电子邮件，感谢他们共享其图像。
 
-* Cost and management of the solution is a concern, especially since Tailwind Traders isn’t sure how popular this feature will be initially. Minimize costs and leverage serverless solutions where possible.
+* 该解决方案的成本和管理是一个问题，尤其是由于 Tailwind Traders 不确定此功能最初会有多受欢迎。 尽可能降低成本并利用无服务器解决方案。
 
  
 

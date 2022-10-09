@@ -8,24 +8,24 @@ casestudy:
 
 ## <a name="requirements"></a>要求
 
-Tailwind Traders would like to migrate their product catalog application to the cloud. This application has a traditional 3-tier configuration using SQL Server as the data store. The IT team hopes you can help modernize the application. They have provided this diagram and several areas that could be improved. 
+Tailwind Traders 希望将其产品目录应用程序迁移到云中。 此应用程序具有传统的 3 层配置，同时使用 SQL Server 作为数据存储。 IT 团队希望你能够帮助实现应用程序的现代化。 他们提供了此关系图和几个可以改进的方面。 
 
 ![计算体系结构](media/compute.png)
 
-* The frontend application is a .NET core-based web app. During peak periods 1750 customers visit the website each hour. 
+* 前端应用程序是基于 .NET core 的 Web 应用。 在高峰期，每小时有 1750 名客户访问该网站。 
 
-* The application runs on IIS web servers in a front-end tier. This tier handles all customer requests for purchasing products. During the latest holiday sale, the front-end servers reached their performance limits and page loads were lengthy. The IT team has considered adding more servers, but during off hours the servers are often idle.
+* 应用程序在前端层的 IIS Web 服务器上运行。 此层处理所有客户购买产品的请求。 在最近的假日促销期间，前端服务器达到了性能限制，页面加载时间很长。 IT 团队已考虑添加更多的服务器，但在非工作时间，服务器通常处于空闲状态。
 
-* The middle tier hosts the business logic that processes customer requests. These requests are often for help desk support. Support requests are queued and lately the wait times have been very long. Customers are offered email rather than wait for a representative. But many customers seem frustrated and are disconnecting rather than wait. Customer requests are 75-125 per hour. 
+* 中间层托管处理客户请求的业务逻辑。 这些请求通常需要支持人员的支持。 支持请求已排队，最近等待时间很长。 客户可以使用电子邮件，而不是等待代表。 但许多客户似乎很沮丧，他们不再等待，而是选择断开连接。 每小时的客户请求数为 75-125。 
 
-* Tailwind Traders 希望将其产品目录应用程序迁移到云中。
+* 后端层使用 SQL Server 数据库来存储客户订单。 目前，后端数据库服务器运行良好。
 
 * 虽然高可用性是一个问题，但由于法律要求，公司必须将所有资源保存在一个区域。
 
 ## <a name="tasks"></a>任务
 
-* 此应用程序具有传统的 3 层配置，同时使用 SQL Server 作为数据存储。 
+* **前端层**。 建议为前端层使用哪个 Azure 计算服务？ 解释你决定该解决方案的原因。 
 
-* IT 团队希望你能够帮助实现应用程序的现代化。 
+* **中间层**。 建议为中间层使用哪个 Azure 计算服务？ 解释你决定该解决方案的原因。 
 
 如何整合“架构良好的框架”支柱，以生成高质量、稳定且高效的云体系结构？
