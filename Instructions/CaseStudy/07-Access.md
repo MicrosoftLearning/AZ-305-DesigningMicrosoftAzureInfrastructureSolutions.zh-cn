@@ -9,21 +9,21 @@ casestudy:
 
 ## <a name="requirements"></a>要求
 
-Tailwind Traders is doing very well and is expanding their workforce. They have successfully acquired an online retailer in the sports apparel space. The company has also located a partner to outsource marketing literature. Tailwind Traders is using Azure Active Directory for user and groups accounts. Here are two specific initiatives the IT department would like you to help with. 
+Tailwind Traders 表现非常出色，正在扩大员工队伍。 他们成功收购了一家体育服装领域的在线零售商。 该公司还找到了一个合作伙伴来外包营销文献。 Tailwind Traders 正在使用 Azure Active Directory 来管理用户和组帐户。 下面是 IT 部门希望你提供帮助的两个具体计划。 
 
 **新用户帐户**
 
-  * The online retailer acquisition will add 75 employees to Tailwind Traders. All the new users have on-premises Active Directory Domain Services accounts in the retailer’s existing domain.
+  * 此次在线零售商收购将为 Tailwind Traders 增加 75 名员工。 所有新用户都在零售商的现有域中拥有本地 Active Directory 域服务帐户。
 
-  * The new marketing partner will initially have 15 employees who will need corporate access. These employees already have Azure AD accounts in the partner’s AAD tenant. 
+  * 新的营销合作伙伴最初将拥有 15 名员工，他们将需要企业访问权限。 这些员工已在合作伙伴的 AAD 租户中拥有 Azure AD 帐户。 
 
-  * The new employees are located at various geographic locations and will need account privileges for their new job roles. Some changes to existing employee roles are expected. 
+  * 新员工位于不同的地理位置，其新工作角色将需要帐户权限。 预期会对现有员工的角色进行一些更改。 
 
   * IT 部门希望借此机会加入新的标识安全功能。 
 
 **新的应用程序访问权限**
 
-  * Tailwind Traders 表现非常出色，正在扩大员工队伍。 
+  * 业务开发团队有一个在 Azure VM 上运行的应用程序，以及存储在 Azure SQL 数据库中的数据。 他们需要安全地允许 VM 查询 Azure SQL 数据库。 
   * 还需要本地服务器才能安全地访问 SQL 数据库，而无需在应用程序代码或配置文件中存储凭据。
 
 ## <a name="tasks"></a>任务
@@ -34,9 +34,9 @@ Tailwind Traders is doing very well and is expanding their workforce. They have 
 
   * 绘制添加新合作伙伴帐户的过程图。 
 
-  * 他们成功收购了一家体育服装领域的在线零售商。 
+  * 对于上述要求，请确保包含将使用的任何工具。 列出建议的解决方案的至少三个好处。 
 
-* 该公司还找到了一个合作伙伴来外包营销文献。 
+* 提供至少三条建议，以改善 Tailwind Traders 的用户标识解决方案。 将这些建议按照重要性排序。 包括提出这些建议的原因。 
 
 **新的应用程序访问权限**
 
