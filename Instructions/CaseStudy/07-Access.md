@@ -5,9 +5,9 @@ casestudy:
 ---
 
 
-# <a name="design-authentication-and-authorization-solutions"></a>设计身份验证和授权解决方案
+# 设计身份验证和授权解决方案
 
-## <a name="requirements"></a>要求
+## 要求
 
 Tailwind Traders 表现非常出色，正在扩大员工队伍。 他们成功收购了一家体育服装领域的在线零售商。 该公司还找到了一个合作伙伴来外包营销文献。 Tailwind Traders 正在使用 Azure Active Directory 来管理用户和组帐户。 下面是 IT 部门希望你提供帮助的两个具体计划。 
 
@@ -15,7 +15,7 @@ Tailwind Traders 表现非常出色，正在扩大员工队伍。 他们成功�
 
   * 此次在线零售商收购将为 Tailwind Traders 增加 75 名员工。 所有新用户都在零售商的现有域中拥有本地 Active Directory 域服务帐户。
 
-  * 新的营销合作伙伴最初将拥有 15 名员工，他们将需要企业访问权限。 这些员工已在合作伙伴的 AAD 租户中拥有 Azure AD 帐户。 
+  * 新的营销合作伙伴最初将拥有 15 名员工，他们将需要企业访问权限。 这些员工已在合作伙伴的 Microsoft Entra 租户中拥有 Microsoft Entra 标识。  
 
   * 新员工位于不同的地理位置，其新工作角色将需要帐户权限。 预期会对现有员工的角色进行一些更改。 
 
@@ -26,7 +26,7 @@ Tailwind Traders 表现非常出色，正在扩大员工队伍。 他们成功�
   * 业务开发团队有一个在 Azure VM 上运行的应用程序，以及存储在 Azure SQL 数据库中的数据。 他们需要安全地允许 VM 查询 Azure SQL 数据库。 
   * 还需要本地服务器才能安全地访问 SQL 数据库，而无需在应用程序代码或配置文件中存储凭据。
 
-## <a name="tasks"></a>任务
+## 任务
 
 **新用户帐户**
 
