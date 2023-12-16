@@ -3,15 +3,15 @@ casestudy:
   title: 设计网络解决方案 - BI 企业应用程序
   module: Network infrastructure solutions
 ---
-# <a name="design-a-network-infrastructure-solution"></a>设计网络基础结构解决方案  
+# 设计网络基础结构解决方案  
 
-## <a name="requirements"></a>要求
+## 要求
 
 Tailwind Traders Enterprise IT 团队在准备定义将公司的某些工作负荷迁移到 Azure 的策略时，必须确定所需的网络组件并设计支持这些组件所需的网络基础结构。 考虑到其运营遍及全球，Tailwind Traders 将使用多个 Azure 区域来托管其应用程序。 这些应用程序大多依赖于基础结构和数据服务，后者也将驻留在 Azure 中。 迁移到 Azure 的内部应用程序必须始终可供 Tailwind Traders 用户访问。 迁移到 Azure 的面向 Internet 的应用程序必须始终可供任何外部客户访问。 
 
 为了整合初始网络设计，Tailwind Traders Enterprise IT 团队选择了两个关键的应用程序，它们代表了预计将迁移到 Azure 的最常见的工作负载类别。  
 
-## <a name="design---bi-enterprise-application"></a>设计 - BI 企业应用程序 
+## 设计 - BI 企业应用程序 
 
 ![BI 企业应用程序体系结构](media/compute.png)
 
@@ -26,7 +26,7 @@ Tailwind Traders Enterprise IT 团队在准备定义将公司的某些工作负�
 -   根据 Tailwind Traders 信息安全和风险团队定义的要求，属于同一应用程序的不同层中的 Azure VM 之间的所有通信必须仅允许运行和维护应用程序所需的端口。 但是，由于 IP 地址空间限制，可能无法向每个层分配专用子网。 Enterprise IT 组需要确定为不需要直接引用 IP 地址或 IP 地址范围的流量筛选配置源和目标的最佳方式。
 
 
-## <a name="tasks---bi-enterprise-application"></a>任务 - BI 企业应用程序 
+## 任务 - BI 企业应用程序 
 
 1. 为 BI 应用程序设计一个三层网络解决方案。 你的设计可能包括 Azure ExpressRoute、VPN 网关、应用程序网关、Azure 防火墙和 Azure 负载均衡器。 网络组件应分组到虚拟网络中，并且应该考虑网络安全组。 准备好解释为何选择解决方案的每个组件。 
 
