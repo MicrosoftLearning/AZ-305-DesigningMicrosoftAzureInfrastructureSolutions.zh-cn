@@ -9,11 +9,11 @@ casestudy:
 
 ## 要求
 
-Tailwind Traders 表现非常出色，正在扩大员工队伍。 他们成功收购了一家体育服装领域的在线零售商。 该公司还找到了一个合作伙伴来外包营销文献。 Tailwind Traders 正在使用 Azure Active Directory 来管理用户和组帐户。 下面是 IT 部门希望你提供帮助的两个具体计划。 
+Tailwind Traders 表现非常出色，正在扩大员工队伍。 他们成功收购了一家体育服装领域的在线零售商。 该公司还找到了一个合作伙伴来外包营销文献。 Tailwind Traders 对用户和组帐户使用 Entra ID。 下面是 IT 部门希望你提供帮助的两个具体计划。 
 
 **新用户帐户**
 
-  * 此次在线零售商收购将为 Tailwind Traders 增加 75 名员工。 所有新用户都在零售商的现有域中拥有本地 Active Directory 域服务帐户。
+  * 此次在线零售商收购将为 Tailwind Traders 增加 75 名员工。 所有新用户都在零售商的现有域中拥有本地帐户。
 
   * 新的营销合作伙伴最初将拥有 15 名员工，他们将需要企业访问权限。 这些员工已在合作伙伴的 Microsoft Entra 租户中拥有 Microsoft Entra 标识。  
 
